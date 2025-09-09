@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Zap, Send } from "lucide-react";
+import Card from "./Card";
 
 const About = () => {
     return (
@@ -29,6 +30,7 @@ const About = () => {
                             </a>
                         </div>
                     </motion.div>
+                    <Card />
                 </div>
             </div>
         </section>

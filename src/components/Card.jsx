@@ -3,7 +3,7 @@ import { LineChart } from "lucide-react";
 
 const Card = () => {
     return (
-        <section className="relative overflow-hidden">
+        <div id="home" className="relative overflow-hidden">
             < motion.div initial={{ opacity: 0, y: 20 }
             } animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
                 <div className="relative rounded-3xl p-1 bg-gradient-to-br from-[#F7E71C] via-[#F7E71C]/40 to-violet-500/40 shadow-2xl">
@@ -38,7 +38,7 @@ const Card = () => {
                     </div>
                 </div>
             </motion.div >
-        </section >
+        </div >
     );
 };
 export default Card;

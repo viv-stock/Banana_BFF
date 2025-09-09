@@ -14,7 +14,7 @@ function App() {
       <>
         <Navbar />
         <About />
-        <Card />
+        {/* <Card /> */}
       </>
     </div>
   )
