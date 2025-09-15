@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 const Alert = ({ status, message }) => {
     const statusConfig = {
         success: {
-            bgColor: "bg-primary",
-            borderColor: "border-primary",
-            textColor: "text-primary",
+            bgColor: "bg-green-400",
+            borderColor: "border-green-400",
+            textColor: "text-green-400",
         },
         warning: {
             bgColor: "bg-yellow-400",
@@ -24,7 +24,7 @@ const Alert = ({ status, message }) => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 50 }}
-            className={`fixed top-12 right-12 px-3 py-3 rounded-md border ${config.borderColor} w-auto overflow-hidden backdrop-blur-md`}
+            className={`fixed top-20 right-12 px-3 py-3 rounded-md border ${config.borderColor} w-auto overflow-hidden backdrop-blur-md`}
         >
             <p className={`${config.textColor}`}>{message}</p>
             <div className="absolute inset-x-0 h-1 botton-0 bg-[rgba(255,255,255,0.5)]">

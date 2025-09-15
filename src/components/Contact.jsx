@@ -10,7 +10,6 @@ const Contact = () => {
 
     const [data, setData] = useState({
         yourName: "",
-        lastName: "",
         email: "",
         message: "",
     });
@@ -44,7 +43,7 @@ const Contact = () => {
         } else {
             await addDoc(collection(db, "messages"), { ...data })
                 .then(() => {
-                    setData({ firstName: "", lastName: "", email: "", message: "" });
+                    setData({ yourName: "", email: "", message: "" });
                     setAlert({
                         isAlert: true,
                         message: "Thank you for contacting me",
@@ -111,20 +110,12 @@ const Contact = () => {
                             <label htmlFor="name" className="text-sm text-zinc-200/90">Name</label>
                             <input
                                 type="text"
-                                name="name"
+                                name="yourName"
                                 value={data.yourName}
                                 onChange={handleTextChange}
-                                placeholder="Name"
+                                placeholder="Jane Doe"
                                 className="mt-1 w-full rounded-xl border border-purple-400/30 bg-purple-900/40 px-4 py-3 outline-none focus:ring-4 ring-[#F7E71C]/30"
                             />
-                            {/* <input
-                                type="text"
-                                name="lastName"
-                                value={data.lastName}
-                                onChange={handleTextChange}
-                                placeholder="Last Name"
-                                className="w-full px-4 py-3 rounded-md border border-[rgba(255,255,255,0.3)] bg-transparent focus:border-primary outline-none text-white"
-                            /> */}
                         </div>
                         <div>
                             <label htmlFor="email" className="text-sm text-zinc-200/90">Email</label>
@@ -133,7 +124,7 @@ const Contact = () => {
                                 name="email"
                                 value={data.email}
                                 onChange={handleTextChange}
-                                placeholder="Your Email"
+                                placeholder="hello@email.com"
                                 className="mt-1 w-full rounded-xl border border-purple-400/30 bg-purple-900/40 px-4 py-3 outline-none focus:ring-4 ring-[#F7E71C]/30"
                             />
                         </div>
@@ -155,7 +146,6 @@ const Contact = () => {
                             onClick={sendMessage}>
                             Send
                         </button>
-
                     </div>
                 </div>
             </div>
