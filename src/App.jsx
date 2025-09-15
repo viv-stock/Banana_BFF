@@ -5,6 +5,7 @@ import About from './components/About'
 import Bots from './components/Bots'
 import Service from './components/Service'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
         <Bots />
         <Service />
         <Contact />
+        <Footer />
       </>
     </div>
   )
